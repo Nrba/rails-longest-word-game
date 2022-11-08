@@ -1,2 +1,9 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<h1>Your results</h1>
+<ul>
+  <li><%= "Letters given: #{@grid}" %></li>
+  <li><%= "Your word: #{@answer.upcase}" %></li>
+  <li><%= "Seconds taken to answer: #{@game[:time]}" %></li>
+  <li><%= "Your score: #{@game[:score]}" %></li>
+  <li><%= "Message: #{@game[:message]}" %></li>
+</ul>
+<h2><%= link_to "Play again", new_path %></h2>
